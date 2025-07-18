@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CALENDÁRIO&ROTEIRO</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== Estilos gerais ===== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #000003;
+    }
+
+    .texto-hover {
+      color: rgb(0, 0, 3);
+      transition: color 0.3s ease;
+      cursor: default;
+    }
+
+    .texto-hover:hover {
+      color: rgb(10, 192, 238);
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #333;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #10c0ee;
+      color: black;
+      border-radius: 5px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto 50px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-top: 30px;
+    }
+
+    /* ===== Transporte ===== */
+    .form-group {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+    }
+
+    #totalBox {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    /* ===== Calendário ===== */
+    .calendar-container {
+      display: flex;
+      width: 100%;
+      max-width: 100%;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 50px;
+      flex-direction: row;
+      box-sizing: border-box;
+    }
+
+    .sidebar {
+      background: #030238;
+      color: white;
+      width: 35%;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
+
+    .sidebar .date {
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .sidebar .day {
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .sidebar .events h4 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+    }
+
+    .sidebar .events ul {
+      list-style: none;
+      padding-left: 0;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .sidebar .events li {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      word-break: break-word;
+    }
+
+    .sidebar .events li span {
+      flex-grow: 1;
+    }
+
+    .sidebar .events button {
+      margin-left: 5px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .create-event {
+      font-size: 16px;
+      background: none;
+      border: 2px solid white;
+      padding: 10px;
+      text-align: center;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 15px;
+      user-select: none;
+    }
+
+    .create-event:hover {
+      background: white;
+      color: #030238;
+    }
+
+    .calendar {
+      width: 65%;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .month-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .month-nav button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #030238;
+    }
+
+    .month-name {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .days-header,
+    .days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+    }
+
+    .days-header div {
+      font-weight: bold;
+      color: rgb(10, 192, 238);
+      margin-bottom: 10px;
+    }
+
+    .days div {
+      padding: 10px;
+      margin: 2px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.2s;
+      user-select: none;
+    }
+
+    .days div:hover {
+      background: rgb(10, 192, 238);
+    }
+
+    .today {
+      background: rgb(10, 192, 238);
+      color: white;
+    }
+
+    .selected {
+      background: rgb(10, 192, 238);
+      color: white;
+    }
+
+    .dot {
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: #030238;
+      margin: 4px auto 0;
+      border-radius: 50%;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-sizing: border-box;
+    }
+
+    .modal h3 {
+      margin-top: 0;
+    }
+
+    .modal input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .save-btn {
+      background: rgb(10, 192, 238);
+      color: white;
+    }
+
+    .cancel-btn {
+      background: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .calendar-container {
+        flex-direction: column;
+      }
+
+      .sidebar, .calendar {
+        width: 100%;
+      }
+
+      .sidebar {
+        align-items: center;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    
+    <div class="container">
+      <h1 class="texto-hover center titulo-principal">TRANSPORTE - VALORES</h1>
+      <!-- Formulário Transporte -->
+      <form id="transport-form">
+        <h2 class="texto-hover">PARIS</h2>
+        <div class="form-group"><input type="checkbox" class="valor" value="2.10" /> Metrô (€2,10)</div>
+        <div class="form-group"><input type="checkbox" class="valor" value="2.10" /> Ônibus (€2,10)</div>
+
+        <h2 class="texto-hover">LONDRES</h2>
+        <div class="form-group"><input type="checkbox" class="valor" value="3.28" /> Metrô (£2,80 ≈ €3,28)</div>
+        <div class="form-group"><input type="checkbox" class="valor" value="2.05" /> Ônibus (£1,75 ≈ €2,05)</div>
+
+        <h2 class="texto-hover">BRUXELAS</h2>
+        <div class="form-group"><input type="checkbox" class="valor" value="2.10" /> Metrô (€2,10)</div>
+        <div class="form-group"><input type="checkbox" class="valor" value="2.10" /> Ônibus (€2,10)</div>
+
+        <h2 class="texto-hover">AMSTERDÃ</h2>
+        <div class="form-group"><input type="checkbox" class="valor" value="3.20" /> Metrô (€3,20)</div>
+        <div class="form-group"><input type="checkbox" class="valor" value="3.20" /> Ônibus (€3,20)</div>
+
+        <h2 class="texto-hover">LUXEMBURGO</h2>
+        <div class="form-group"><input type="checkbox" class="valor" value="0.00" /> Metrô (€0,00)</div>
+        <div class="form-group"><input type="checkbox" class="valor" value="0.00" /> Ônibus (€0,00)</div>
+      </form>
+
+      <div id="totalBox">
+        Total: €<span id="total-euro">0,00</span> | R$<span id="total-real">0,00</span>
+      </div>
+<<h1 class="texto-hover center titulo-principal">CALENDÁRIO</h1>
+      <!-- Calendário -->
+      <div class="calendar-container">
+        <div class="sidebar">
+          <div>
+            <div class="date" id="sidebar-date">--</div>
+            <div class="day" id="sidebar-day">----</div>
+            <div class="events">
+              <h4>Eventos do Dia</h4>
+              <ul id="event-list"></ul>
+            </div>
+          </div>
+          <div class="create-event" onclick="openModal()">Criar Evento +</div>
+        </div>
+        <div class="calendar">
+          <div class="month-nav">
+            <button onclick="changeMonth(-1)">❮</button>
+            <div class="month-name" id="month-name">MÊS</div>
+            <button onclick="changeMonth(1)">❯</button>
+          </div>
+          <div class="days-header">
+            <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sab</div>
+          </div>
+          <div class="days" id="calendar-days"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal">
+      <h3>Adicionar Evento</h3>
+      <input type="text" id="event-title" placeholder="Título do evento" />
+      <input type="time" id="event-time" />
+      <div class="buttons">
+        <button class="cancel-btn" onclick="closeModal()">Cancelar</button>
+        <button class="save-btn" onclick="saveEvent()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Transporte
+    const checkboxes = document.querySelectorAll('.valor');
+    const totalEuroEl = document.getElementById('total-euro');
+    const totalRealEl = document.getElementById('total-real');
+    const cotacao = 5.60;
+
+    function atualizarTotal() {
+      let total = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) total += parseFloat(cb.value);
+      });
+      totalEuroEl.textContent = total.toFixed(2).replace('.', ',');
+      totalRealEl.textContent = (total * cotacao).toFixed(2).replace('.', ',');
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+
+    // Calendário 
+    const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    const dayNames = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+
+    let currentDate = new Date();
+    let selectedDate = new Date();
+
+    function getEvents() {
+      return JSON.parse(localStorage.getItem("events") || "{}");
+    }
+
+    function setEvents(events) {
+      localStorage.setItem("events", JSON.stringify(events));
+    }
+
+    function updateSidebar(date) {
+      document.getElementById("sidebar-date").textContent = date.getDate();
+      document.getElementById("sidebar-day").textContent = dayNames[date.getDay()].toUpperCase();
+
+      const key = date.toISOString().split("T")[0];
+      const events = getEvents()[key] || [];
+      const list = document.getElementById("event-list");
+      list.innerHTML = "";
+
+      if (events.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "Nenhum evento";
+        list.appendChild(li);
+      } else {
+        events.forEach((e, i) => {
+          const li = document.createElement("li");
+          const span = document.createElement("span");
+          span.textContent = `${e.time} - ${e.title}`;
+          li.appendChild(span);
+
+          const edit = document.createElement("button");
+          edit.textContent = "✏️";
+          edit.title = "Editar evento";
+          edit.onclick = () => editEvent(i);
+
+          const del = document.createElement("button");
+          del.textContent = "❌";
+          del.title = "Excluir evento";
+          del.onclick = () => deleteEvent(i);
+
+          li.appendChild(edit);
+          li.appendChild(del);
+
+          list.appendChild(li);
+        });
+      }
+    }
+
+    function renderCalendar() {
+      const daysContainer = document.getElementById("calendar-days");
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      document.getElementById("month-name").textContent = `${monthNames[month]} ${year}`;
+      daysContainer.innerHTML = "";
+
+      const firstDay = new Date(year, month, 1);
+      const start = firstDay.getDay();
+      const last = new Date(year, month + 1, 0).getDate();
+
+      const events = getEvents();
+
+      // Espaços vazios antes do primeiro dia
+      for (let i = 0; i < start; i++) {
+        daysContainer.appendChild(document.createElement("div"));
+      }
+
+      for (let d = 1; d <= last; d++) {
+        const date = new Date(year, month, d);
+        const key = date.toISOString().split("T")[0];
+        const div = document.createElement("div");
+        div.textContent = d;
+
+        if (date.toDateString() === new Date().toDateString()) div.classList.add("today");
+        if (date.toDateString() === selectedDate.toDateString()) div.classList.add("selected");
+        if (events[key]) {
+          const dot = document.createElement("div");
+          dot.className = "dot";
+          div.appendChild(dot);
+        }
+
+        div.onclick = () => {
+          selectedDate = date;
+          updateSidebar(date);
+          renderCalendar();
+        };
+
+        daysContainer.appendChild(div);
+      }
+    }
+
+    function changeMonth(offset) {
+      currentDate.setMonth(currentDate.getMonth() + offset);
+      renderCalendar();
+    }
+
+    function openModal() {
+      document.getElementById("event-title").value = "";
+      document.getElementById("event-time").value = "";
+      document.getElementById("modal").style.display = "flex";
+      // Reset save button onclick
+      document.querySelector(".save-btn").onclick = saveEvent;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+
+    function saveEvent() {
+      const title = document.getElementById("event-title").value.trim();
+      const time = document.getElementById("event-time").value;
+
+      if (!title || !time) {
+        alert("Por favor, preencha título e horário.");
+        return;
+      }
+
+      const key = selectedDate.toISOString().split("T")[0];
+      const events = getEvents();
+      if (!events[key]) events[key] = [];
+      events[key].push({ title, time });
+      setEvents(events);
+      closeModal();
+      updateSidebar(selectedDate);
+      renderCalendar();
+    }
+
+    function deleteEvent(index) {
+      const key = selectedDate.toISOString().split("T")[0];
+      const events = getEvents();
+      events[key].splice(index, 1);
+      if (events[key].length === 0) delete events[key];
+      setEvents(events);
+      updateSidebar(selectedDate);
+      renderCalendar();
+    }
+
+    function editEvent(index) {
+      const key = selectedDate.toISOString().split("T")[0];
+      const events = getEvents();
+      const event = events[key][index];
+
+      document.getElementById("event-title").value = event.title;
+      document.getElementById("event-time").value = event.time;
+
+      document.getElementById("modal").style.display = "flex";
+
+      // Redefine o botão salvar para editar
+      document.querySelector(".save-btn").onclick = () => {
+        const title = document.getElementById("event-title").value.trim();
+        const time = document.getElementById("event-time").value;
+        if (!title || !time) {
+          alert("Por favor, preencha título e horário.");
+          return;
+        }
+
+        events[key][index] = { title, time };
+        setEvents(events);
+        closeModal();
+        updateSidebar(selectedDate);
+        renderCalendar();
+      };
+    }
+
+    function alertTodayEvents() {
+      const todayKey = new Date().toISOString().split("T")[0];
+      const events = getEvents()[todayKey];
+      if (events && events.length > 0) {
+        const list = events.map(e => `${e.time} - ${e.title}`).join("\n");
+        alert(`Eventos de hoje:\n${list}`);
+      }
+    }
+
+    // Inicialização
+    updateSidebar(selectedDate);
+    renderCalendar();
+    alertTodayEvents();
+  </script>
+
+</body>
+</html>
