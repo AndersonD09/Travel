@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckList</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .texto-hover {
+      color: rgb(0, 0, 3);
+      transition: color 0.3s ease;
+    }
+
+    .texto-hover:hover {
+      color: rgb(10, 192, 238);
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #333;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover, nav ul li a:focus {
+      background-color: #10c0ee;
+      color: black;
+      border-radius: 5cap;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 50px;
+      max-width: 700px;
+      margin: 0 auto 40px auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="texto-hover">CHECKLIST DE VIAGEM</h1>
+
+    <div class="container">
+      <h2 class="texto-hover">DOCUMENTOS</h2>
+      <div class="two-columns">
+        <label><input type="checkbox"> Passaporte</label>
+        <label><input type="checkbox"> Visto (se necessário)</label>
+        <label><input type="checkbox"> Documentos Pessoais</label>
+        <label><input type="checkbox"> Passagens</label>
+        <label><input type="checkbox"> Reserva de Hotel</label>
+        <label><input type="checkbox"> Seguro Viagem</label>
+        <label><input type="checkbox"> Cartão de Débito/Crédito Internacional</label>
+        <label><input type="checkbox"> Comprovante de vacinação</label>
+      </div>
+
+      <h2 class="texto-hover">ELETRÔNICOS</h2>
+      <div class="two-columns">
+        <label><input type="checkbox"> Celular</label>
+        <label><input type="checkbox"> Carregadores</label>
+        <label><input type="checkbox"> Powerbank</label>
+        <label><input type="checkbox"> Headphone</label>
+        <label><input type="checkbox"> Adaptador de Tomada Universal</label>
+        <label><input type="checkbox"> Notebook/Tablet</label>
+      </div>
+
+      <h2 class="texto-hover">NECESSAIRE</h2>
+      <div class="two-columns">
+        <label><input type="checkbox"> Escova e Pasta de Dente</label>
+        <label><input type="checkbox"> Antitranspirante</label>
+        <label><input type="checkbox"> Filtro Solar</label>
+        <label><input type="checkbox"> Óculos de Sol</label>
+        <label><input type="checkbox"> Remédios pessoais</label>
+        <label><input type="checkbox"> Kit de Higiene Pessoal</label>
+      </div>
+
+      <h2 class="texto-hover">MALA PARA DESPACHAR</h2>
+      <div class="two-columns">
+        <label><input type="checkbox"> Roupas íntimas</label>
+        <label><input type="checkbox"> Meias</label>
+        <label><input type="checkbox"> Tênis/Sapato Confortável</label>
+        <label><input type="checkbox"> Chinelo</label>
+        <label><input type="checkbox"> Touca/Luvas/Casaco (inverno)</label>
+        <label><input type="checkbox"> Secador e Escova</label>
+        <label><input type="checkbox"> Roupas Casuais e de Passeio</label>
+      </div>
+
+      <h2 class="texto-hover">OUTROS</h2>
+      <div class="two-columns">
+        <label><input type="checkbox"> Mochila de Passeio</label>
+        <label><input type="checkbox"> Cadeado para Mala</label>
+        <label><input type="checkbox"> Snacks e Barrinhas</label>
+        <label><input type="checkbox"> Câmera Fotográfica</label>
+        <label><input type="checkbox"> Garrafinha de Água</label>
+        <label><input type="checkbox"> Protetor Labial</label>
+        <label><input type="checkbox"> Livros ou entretenimento para voo</label>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
