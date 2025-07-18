@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARIS</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .texto-hover {
+      color: rgb(0, 0, 3);
+      transition: color 0.3s ease;
+    }
+
+    .texto-hover:hover {
+      color: rgb(10, 192, 238);
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #333;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover, nav ul li a:focus {
+      background-color: #10c0ee;
+      color: black;
+      border-radius: 5cap;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+
+    .content {
+      margin-bottom: 40px;
+    }
+
+    .content .bio {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkbox {
+      margin: 10px 0;
+      display: block;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    #totalBox, #cotacaoBox {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="texto-hover center titulo-principal">PARIS</h1>
+
+    <div class="container">
+      <center><h1 class="texto-hover">ATRAÇÕES</h1></center>
+
+      <!-- DISNEY -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">1. DISNEY PARIS</h2>
+          <p>A Disneyland Paris é um resort de entretenimento localizado 32 km a leste do centro de Paris.</p>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="80"> Entrada - €80</label>
+        </div>
+        <div class="gallery">
+          <img src="Paris_22.png" alt="Disney 1" />
+          <img src="Disney3.png" alt="Disney 2" />
+          <img src="Disney1.png" alt="Disney 3" />
+        </div>
+      </div>
+
+      <!-- TORRE EIFFEL -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">2. TORRE EIFFEL</h2>
+          <p>O principal cartão postal da cidade, com vistas panorâmicas e experiências únicas.</p>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="23.10"> Entrada - €23,10</label>
+        </div>
+        <div class="gallery">
+          <img src="Torre2.png" alt="Torre Eiffel 1" />
+          <img src="torre3.png" alt="Torre Eiffel 2" />
+          <img src="torre1.png" alt="Torre Eiffel 3" />
+        </div>
+      </div>
+
+      <!-- LOUVRE -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">3. MUSEU DO LOUVRE</h2>
+          <p>Um dos museus mais famosos do mundo, abriga a Mona Lisa e muitas outras obras.</p>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="17"> Entrada - €17</label>
+        </div>
+        <div class="gallery">
+          <img src="Louvre1.png" alt="Louvre 1" />
+          <img src="Louvre2.png" alt="Louvre 2" />
+          <img src="Louvre3.png" alt="Louvre 3" />
+        </div>
+      </div>
+
+      <!-- CRUZEIRO -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">4. CRUZEIRO NO RIO SENA</h2>
+          <p>Passeio pelos monumentos históricos da cidade navegando pelo Rio Sena.</p>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="15"> Cruzeiro - €15</label>
+        </div>
+        <div class="gallery">
+          <img src="Rio_sena1.png" alt="Sena 1" />
+          <img src="Rio_sena3.png" alt="Sena 2" />
+          <img src="Rio_sena2.png" alt="Sena 3" />
+        </div>
+      </div>
+
+      <!-- ESTÁDIO PSG -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">5. ESTÁDIO PARC DES PRINCES</h2>
+          <p>Estádio do PSG, palco de grandes jogos e eventos esportivos.</p>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="27"> Tour - €27</label>
+        </div>
+        <div class="gallery">
+          <img src="Estadio1.png" alt="Estádio 1" />
+          <img src="Estadio2.png" alt="Estádio 2" />
+          <img src="Estadio3.png" alt="Estádio 3" />
+        </div>
+      </div>
+
+      <!-- ARCO DO TRIUNFO -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">6. ARCO DO TRIUNFO</h2>
+          <p>Monumento icônico construído em homenagem aos soldados franceses.</p>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="13"> Entrada - €13</label>
+        </div>
+        <div class="gallery">
+          <img src="Arco1.png" alt="Arco 1" />
+          <img src="Arco2.png" alt="Arco 2" />
+          <img src="Arco3.png" alt="Arco 3" />
+        </div>
+      </div>
+
+      <!-- TOTAL E COTAÇÃO -->
+      <div id="totalBox">
+        Total: €<span id="total">0.00</span><br>
+        Total em Reais (R$): R$<span id="totalReais">0.00</span>
+      </div>
+
+      <div id="cotacaoBox">
+        Cotação atual: <span id="cotacaoTexto">carregando...</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.atracao');
+    const totalDisplay = document.getElementById('total');
+    const totalReaisDisplay = document.getElementById('totalReais');
+    const cotacaoTexto = document.getElementById('cotacaoTexto');
+    let cotacao = 6.00;
+
+    function atualizarTotal() {
+      let totalEuro = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          totalEuro += parseFloat(cb.value);
+        }
+      });
+      const totalReais = totalEuro * cotacao;
+      totalDisplay.textContent = totalEuro.toFixed(2);
+      totalReaisDisplay.textContent = totalReais.toFixed(2);
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+
+    // Buscar cotação em tempo real (EUR -> BRL)
+    fetch('https://api.exchangerate-api.com/v4/latest/EUR')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.rates && data.rates.BRL) {
+          cotacao = data.rates.BRL;
+          cotacaoTexto.textContent = `€1 = R$${cotacao.toFixed(2)}`;
+          atualizarTotal();
+        } else {
+          cotacaoTexto.innerHTML = `<span style="color:red;">Erro ao carregar a cotação.</span>`;
+        }
+      })
+      .catch(() => {
+        cotacaoTexto.innerHTML = `<span style="color:red;">Erro de conexão. Usando valor padrão (€1 = R$6,00)</span>`;
+        atualizarTotal();
+      });
+  </script>
+</body>
+</html>

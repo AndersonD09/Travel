@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXEMBURGO</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .texto-hover {
+            color: rgb(0, 0, 3);
+            transition: color 0.3s ease;
+        }
+
+        .texto-hover:hover {
+            color: rgb(10, 192, 238);
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #333;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #10c0ee;
+            color: black;
+            border-radius: 5cap;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        .content {
+            margin-bottom: 40px;
+        }
+
+        .content .bio {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox {
+      margin: 10px 0;
+      display: block;
+      font-weight: bold;
+      text-align: right;
+    }
+
+        #totalBox {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+   <header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+        <h1 class="texto-hover center titulo-principal">LUXEMBURGO</h1>
+        <div class="container">
+            <center><h1 class="texto-hover">ATRAÇÕES</h1></center>
+
+            <div class="content">
+                <div class="bio">
+                    <h2 class="texto-hover">1. PONTE ADOLPHE</h2>
+                    <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Acesso livre - €0</label>
+                    <p>A Ponte Adolphe é um símbolo de independência nacional e oferece belas vistas do Vale Pétrusse, sendo um dos melhores lugares para fotos panorâmicas.</p>
+                </div>
+                <div class="gallery">
+                    <img src="Ponte1.png" alt="Ponte 1">
+                    <img src="Ponte3.png" alt="Ponte 3">
+                    <img src="Ponte2.png" alt="Ponte 2">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="bio">
+                    <h2 class="texto-hover">2. CASTELO DE VIANDEN</h2>
+                    <label class="checkbox"><input type="checkbox" class="atracao" value="10"> Entrada - €10</label>
+                    <p>O Castelo de Vianden é um dos castelos mais bonitos da Europa, localizado no norte de Luxemburgo, com arquitetura medieval e vista deslumbrante.</p>
+                </div>
+                <div class="gallery">
+                    <img src="Vienden1.png" alt="Castelo 1">
+                    <img src="Vienden2.png" alt="Castelo 2">
+                    <img src="Vienden3.png" alt="Castelo 3">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="bio">
+                    <h2 class="texto-hover">3. CHEMIN DE LA CORNICHE</h2>
+                    <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Caminhada livre - €0</label>
+                    <p>Conhecido como a "varanda mais bonita da Europa", esse caminho oferece uma vista panorâmica da cidade velha e do Vale do Rio Alzette.</p>
+                </div>
+                <div class="gallery">
+                    <img src="Varanda.png" alt="Corniche 1">
+                    <img src="Varanda2.png" alt="Corniche 2">
+                    <img src="Varanda3.png" alt="Corniche 3">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="bio">
+                    <h2 class="texto-hover">4. ELEVADOR PANORÂMICO</h2>
+                    <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Acesso gratuito - €0</label>
+                    <p>O elevador panorâmico liga os bairros altos e baixos de Luxemburgo e proporciona uma vista espetacular da cidade e do vale.</p>
+                </div>
+                <div class="gallery">
+                    <img src="Elevador1.png" alt="Elevador 1">
+                    <img src="Elevador2.png" alt="Elevador 2">
+                    <img src="Elevador3.png" alt="Elevador 3">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="bio">
+                    <h2 class="texto-hover">5. CATEDRAL DE NOTRE-DAME</h2>
+                    <label class="checkbox"><input type="checkbox" class="atracao" value="5"> Entrada - €5</label>
+                    <p>A Catedral de Notre-Dame de Luxemburgo é um marco religioso com vitrais deslumbrantes e arquitetura gótica impressionante.</p>
+                </div>
+                <div class="gallery">
+                    <img src="NotreLU1.png" alt="Catedral 1">
+                    <img src="CatreLu2.png" alt="Catedral 2">
+                    <img src="CatreLu3.png" alt="Catedral 3">
+                </div>
+            </div>
+
+            <div id="totalBox">
+                Total: €<span id="total">0.00</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.atracao');
+        const totalDisplay = document.getElementById('total');
+
+        function atualizarTotal() {
+            let total = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    total += parseFloat(cb.value);
+                }
+            });
+            totalDisplay.textContent = total.toFixed(2);
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+    </script>
+</body>
+</html>

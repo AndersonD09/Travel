@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LONDRES</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .texto-hover {
+            color: rgb(0, 0, 3);
+            transition: color 0.3s ease;
+        }
+
+        .texto-hover:hover {
+            color: rgb(10, 192, 238);
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #333;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #10c0ee;
+            color: black;
+            border-radius: 5cap;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        .content {
+            margin-bottom: 40px;
+        }
+
+        .content .bio {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox {
+      margin: 10px 0;
+      display: block;
+      font-weight: bold;
+      text-align: right;
+    }
+
+        #totalBox {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+    <h1 class="texto-hover center titulo-principal">LONDRES</h1>
+</main>
+
+<main>
+    <div class="container">
+        <center><h1 class="texto-hover">ATRAÇÕES</h1></center>
+
+        <!-- ATRAÇÕES COM CHECKBOX, TEXTO E IMAGENS -->
+        <!-- EXEMPLO COMPLETO -->
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">1. BIG BEN</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="15"> Ingresso - €15</label>
+                <p>O Big Ben é um dos monumentos mais icônicos de Londres, localizado no Palácio de Westminster.</p>
+            </div>
+            <div class="gallery">
+                <img src="Bigbang2.png" alt="Big Ben 2">
+                <img src="BigBang1.png" alt="Big Ben 1">
+                <img src="Bigbang3.png" alt="Big Ben 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">2. LONDON EYE</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="30"> Ingresso - €30</label>
+                <p>Roda-gigante com vista panorâmica de Londres.</p>
+            </div>
+            <div class="gallery">
+                <img src="Eye1.png" alt="London Eye 1">
+                <img src="Eye3.png" alt="London Eye 2">
+                <img src="Eye2.png" alt="London Eye 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">3. TOWER BRIDGE</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="10"> Ingresso - €10</label>
+                <p>Ponte vitoriana famosa sobre o rio Tâmisa.</p>
+            </div>
+            <div class="gallery">
+                <img src="Bridge1.png" alt="Bridge 1">
+                <img src="Bridge3.png" alt="Bridge 3">
+                <img src="Bridge2.png" alt="Bridge 2">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">4. TORRE DE LONDRES</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="25"> Ingresso - €25</label>
+                <p>Castelo histórico e abrigo das Joias da Coroa Britânica.</p>
+            </div>
+            <div class="gallery">
+                <img src="tower1.png" alt="Torre 1">
+                <img src="tower2.png" alt="Torre 2">
+                <img src="tower3.png" alt="Torre 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">5. MUSEUS</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Entrada Gratuita - €0</label>
+                <p>British Museum e Museu de História Natural.</p>
+            </div>
+            <div class="gallery">
+                <img src="museu1.png" alt="Foto 1">
+                <img src="Museu3.png" alt="Foto 2">
+                <img src="Museu2.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">6. PALÁCIO DE BUCKINGHAM</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="20"> Ingresso - €20</label>
+                <p>Residência oficial da monarquia britânica.</p>
+            </div>
+            <div class="gallery">
+                <img src="Palacio2.png" alt="Foto 1">
+                <img src="Palacio1.png" alt="Foto 2">
+                <img src="Palacio3.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">7. HMS BELFAST</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="18"> Ingresso - €18</label>
+                <p>Navio-museu da Segunda Guerra Mundial.</p>
+            </div>
+            <div class="gallery">
+                <img src="Navio1.png" alt="Foto 1">
+                <img src="Navio2.png" alt="Foto 2">
+                <img src="Navio3.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">8. MADAME TUSSAUDS</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="35"> Ingresso - €35</label>
+                <p>Museu de cera com réplicas de celebridades.</p>
+            </div>
+            <div class="gallery">
+                <img src="Cera1.png" alt="Foto 1">
+                <img src="Cera2.png" alt="Foto 2">
+                <img src="Cera3.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">9. MUSEU SHERLOCK HOLMES</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="16"> Ingresso - €16</label>
+                <p>Recriando ambientes dos livros do famoso detetive.</p>
+            </div>
+            <div class="gallery">
+                <img src="Holmes1.png" alt="Foto 1">
+                <img src="Holmes3.png" alt="Foto 2">
+                <img src="Homes2.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">10. BOROUGH MARKET</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Entrada Gratuita - €0</label>
+                <p>Mercado gastronômico tradicional de Londres.</p>
+            </div>
+            <div class="gallery">
+                <img src="Feira1.png" alt="Foto 1">
+                <img src="Feira2.png" alt="Foto 2">
+                <img src="Feira3.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">11. CHINATOWN</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Entrada Gratuita - €0</label>
+                <p>Bairro com restaurantes e comércios asiáticos.</p>
+            </div>
+            <div class="gallery">
+                <img src="China1.png" alt="Foto 1">
+                <img src="China2.png" alt="Foto 2">
+                <img src="China3.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="bio">
+                <h2 class="texto-hover">12. PICCADILLY CIRCUS</h2>
+                <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Entrada Gratuita - €0</label>
+                <p>Praça central com paineis luminosos famosos.</p>
+            </div>
+            <div class="gallery">
+                <img src="Circus1.png" alt="Foto 1">
+                <img src="Circus2.png" alt="Foto 2">
+                <img src="Circus3.png" alt="Foto 3">
+            </div>
+        </div>
+
+        <div id="totalBox">
+            Total: €<span id="total">0.00</span>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    const checkboxes = document.querySelectorAll('.atracao');
+    const totalDisplay = document.getElementById('total');
+
+    function atualizarTotal() {
+        let total = 0;
+        checkboxes.forEach(cb => {
+            if (cb.checked) {
+                total += parseFloat(cb.value);
+            }
+        });
+        totalDisplay.textContent = total.toFixed(2);
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+</script>
+</body>
+</html>

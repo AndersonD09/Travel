@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOLANDA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+        .texto-hover {
+            color: rgb(0, 0, 3);
+            transition: color 0.3s ease;
+        }
+
+        .texto-hover:hover {
+            color: rgb(10, 192, 238);
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #333;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #10c0ee;
+            color: black;
+            border-radius: 5cap;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+
+        .content {
+            margin-bottom: 40px;
+        }
+
+        .content .bio {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkbox {
+      margin: 10px 0;
+      display: block;
+      font-weight: bold;
+      text-align: right;
+    }
+
+        #totalBox {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+<header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="texto-hover center titulo-principal">HOLANDA</h1>
+
+    <div class="container">
+      <h1 class="texto-hover center">ATRAÇÕES</h1>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">1. CANAIS</h2>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="0"> Passeio pelos canais - €0</label>
+          <p>Os canais são uma marca registrada de Amsterdã, proporcionando passeios incríveis por toda a cidade.</p>
+        </div>
+        <div class="gallery">
+          <img src="Am1.png" alt="Canal 1" />
+          <img src="Am2.png" alt="Canal 2" />
+          <img src="Am3.png" alt="Canal 3" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">2. HEINEKEN EXPERIENCE</h2>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="21"> Entrada - €21</label>
+          <p>Um museu interativo na antiga cervejaria da Heineken, onde você conhece a história da marca e o processo de fabricação.</p>
+        </div>
+        <div class="gallery">
+          <img src="Cerveja1.png" alt="Heineken 1" />
+          <img src="Cerveja3.png" alt="Heineken 2" />
+          <img src="Cerveja2.png" alt="Heineken 3" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">3. CASA DE ANNE FRANK</h2>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="16"> Entrada - €16</label>
+          <p>O museu dedicado à memória de Anne Frank, jovem vítima do Holocausto, localizado na casa onde ela se escondeu com sua família.</p>
+        </div>
+        <div class="gallery">
+          <img src="Frank3.png" alt="Anne 1" />
+          <img src="Frank2.png" alt="Anne 2" />
+          <img src="Frank1.png" alt="Anne 3" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">4. MUSEU VAN GOGH</h2>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="20"> Entrada - €20</label>
+          <p>O museu abriga a maior coleção de obras de Vincent van Gogh, incluindo suas famosas pinturas e cartas pessoais.</p>
+        </div>
+        <div class="gallery">
+          <img src="Van1.png" alt="Van Gogh 1" />
+          <img src="Van2.png" alt="Van Gogh 2" />
+          <img src="Van3.png" alt="Van Gogh 3" />
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">5. CRUZEIRO NOS CANAIS</h2>
+          <label class="checkbox"><input type="checkbox" class="atracao" value="13"> Passeio - €13</label>
+          <p>Uma das formas mais agradáveis de explorar Amsterdã é através de um cruzeiro relaxante pelos canais da cidade.</p>
+        </div>
+        <div class="gallery">
+          <img src="Cruzeiro1.png" alt="Cruzeiro 1" />
+          <img src="Cruzeiro2.png" alt="Cruzeiro 2" />
+          <img src="Cruzeiro3.png" alt="Cruzeiro 3" />
+        </div>
+      </div>
+
+      <div id="totalBox">
+        Total: €<span id="total">0.00</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.atracao');
+    const totalDisplay = document.getElementById('total');
+
+    function atualizarTotal() {
+      let total = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          total += parseFloat(cb.value);
+        }
+      });
+      totalDisplay.textContent = total.toFixed(2);
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+  </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BÉLGICA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .texto-hover {
+      color: rgb(0, 0, 3);
+      transition: color 0.3s ease;
+    }
+
+    .texto-hover:hover {
+      color: rgb(10, 192, 238);
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #333;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #10c0ee;
+      color: black;
+      border-radius: 5cap;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      width: 80%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+    }
+
+    .content {
+      margin-bottom: 40px;
+    }
+
+    .content .bio {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .checkbox {
+      margin: 10px 0;
+      display: block;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    #totalBox, #cotacaoBox {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Checklist.html">CheckList</a></li>
+        <li><a href="paris.html">Paris</a></li>
+        <li><a href="londres.html">Londres</a></li>
+        <li><a href="belgica.html">Bélgica</a></li>
+        <li><a href="holanda.html">Holanda</a></li>
+        <li><a href="luxemburgo.html">Luxemburgo</a></li>
+        <li><a href="transportes.html">Calendário&Roteiro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="texto-hover center titulo-principal">BÉLGICA</h1>
+
+    <div class="container">
+      <center><h1 class="texto-hover">ATRAÇÕES</h1></center>
+
+      <!-- ATRAÇÕES -->
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">1. GRAN PLACE</h2>
+          <p>A Grand Place é o coração de Bruxelas, com edifícios históricos e cultura belga.</p>
+          <label class="checkbox"><input type="checkbox" class="entrada" value="0"> Passeio Gratuito - €0</label>
+        </div>
+        <div class="gallery">
+          <img src="Gran2.png" alt="Gran Place 1">
+          <img src="Gran1.png" alt="Gran Place 2">
+          <img src="Gran3.png" alt="Gran Place 3">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">2. ATOMIUM</h2>
+          <p>Estrutura futurista com vistas panorâmicas e exposições interativas.</p>
+          <label class="checkbox"><input type="checkbox" class="entrada" value="16"> Entrada - €16</label>
+        </div>
+        <div class="gallery">
+          <img src="Atomium2.png" alt="Atomium 1">
+          <img src="Atomium1.png" alt="Atomium 2">
+          <img src="Atomium3.png" alt="Atomium 3">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">3. BRUSSELS MARKET</h2>
+          <p>Mercados com comidas típicas, antiguidades e cultura local.</p>
+          <label class="checkbox"><input type="checkbox" class="entrada" value="0"> Entrada Gratuita</label>
+        </div>
+        <div class="gallery">
+          <img src="Market1.png" alt="Market 1">
+          <img src="Market2.png" alt="Market 2">
+          <img src="Market3.png" alt="Market 3">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">4. CATEDRAL ST. MICHEL ET GUDULE</h2>
+          <p>Catedral gótica com vitrais incríveis e arquitetura imponente.</p>
+          <label class="checkbox"><input type="checkbox" class="entrada" value="5"> Entrada - €5</label>
+        </div>
+        <div class="gallery">
+          <img src="Catre1.png" alt="Catedral 1">
+          <img src="Catre2.png" alt="Catedral 2">
+          <img src="Catre3.png" alt="Catedral 3">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">5. MINI EUROPE</h2>
+          <p>Parque de miniaturas de monumentos europeus em escala realista.</p>
+          <label class="checkbox"><input type="checkbox" class="entrada" value="19"> Entrada - €19</label>
+        </div>
+        <div class="gallery">
+          <img src="Mini1.png" alt="Mini Europe 1">
+          <img src="Mini2.png" alt="Mini Europe 2">
+          <img src="Mini3.png" alt="Mini Europe 3">
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="bio">
+          <h2 class="texto-hover">6. MANNEKEN PIS</h2>
+          <p>Estátua icônica do “menino fazendo xixi” — símbolo irreverente da cidade.</p>
+          <label class="checkbox"><input type="checkbox" class="entrada" value="0"> Entrada Gratuita</label>
+        </div>
+        <div class="gallery">
+          <img src="Pis1.png" alt="Pis 1">
+          <img src="Pis2.png" alt="Pis 2">
+          <img src="Pis3.png" alt="Pis 3">
+        </div>
+      </div>
+
+      <!-- TOTAL E COTAÇÃO -->
+      <div id="totalBox">
+        Total: €<span id="total">0.00</span><br>
+        Total em Reais (R$): R$<span id="totalReais">0.00</span>
+      </div>
+
+      <div id="cotacaoBox">
+        Cotação atual: <span id="cotacaoTexto">carregando...</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Travel Europa. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.entrada');
+    const totalDisplay = document.getElementById('total');
+    const totalReaisDisplay = document.getElementById('totalReais');
+    const cotacaoTexto = document.getElementById('cotacaoTexto');
+    let cotacao = 6.00;
+
+    function atualizarTotal() {
+      let totalEuro = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          totalEuro += parseFloat(cb.value);
+        }
+      });
+      const totalReais = totalEuro * cotacao;
+      totalDisplay.textContent = totalEuro.toFixed(2);
+      totalReaisDisplay.textContent = totalReais.toFixed(2);
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+
+    fetch('https://api.exchangerate-api.com/v4/latest/EUR')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.rates && data.rates.BRL) {
+          cotacao = data.rates.BRL;
+          cotacaoTexto.textContent = `€1 = R$${cotacao.toFixed(2)}`;
+          atualizarTotal();
+        } else {
+          cotacaoTexto.innerHTML = `<span style="color:red;">Erro ao carregar a cotação.</span>`;
+        }
+      })
+      .catch(() => {
+        cotacaoTexto.innerHTML = `<span style="color:red;">Erro de conexão. Usando valor padrão (€1 = R$6,00)</span>`;
+        atualizarTotal();
+      });
+  </script>
+</body>
+</html>
