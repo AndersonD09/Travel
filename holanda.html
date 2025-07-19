@@ -92,12 +92,13 @@
       text-align: right;
     }
 
-        #totalBox {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 30px;
-        }
+      
+       #totalBox, #cotacaoBox {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 30px;
+    }
     </style>
 <header>
     <nav>
@@ -187,6 +188,15 @@
       <div id="totalBox">
         Total: €<span id="total">0.00</span>
       </div>
+    </<!-- TOTAL E COTAÇÃO -->
+      <div id="totalBox">
+        Total: €<span id="total">0.00</span><br>
+        Total em Reais (R$): R$<span id="totalReais">0.00</span>
+      </div>
+
+      <div id="cotacaoBox">
+        Cotação atual: <span id="cotacaoTexto">carregando...</span>
+      </div>
     </div>
   </main>
 
@@ -197,18 +207,40 @@
   <script>
     const checkboxes = document.querySelectorAll('.atracao');
     const totalDisplay = document.getElementById('total');
+    const totalReaisDisplay = document.getElementById('totalReais');
+    const cotacaoTexto = document.getElementById('cotacaoTexto');
+    let cotacao = 6.00;
 
     function atualizarTotal() {
-      let total = 0;
+      let totalEuro = 0;
       checkboxes.forEach(cb => {
         if (cb.checked) {
-          total += parseFloat(cb.value);
+          totalEuro += parseFloat(cb.value);
         }
       });
-      totalDisplay.textContent = total.toFixed(2);
+      const totalReais = totalEuro * cotacao;
+      totalDisplay.textContent = totalEuro.toFixed(2);
+      totalReaisDisplay.textContent = totalReais.toFixed(2);
     }
 
     checkboxes.forEach(cb => cb.addEventListener('change', atualizarTotal));
+
+    // Buscar cotação em tempo real (EUR -> BRL)
+    fetch('https://api.exchangerate-api.com/v4/latest/EUR')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.rates && data.rates.BRL) {
+          cotacao = data.rates.BRL;
+          cotacaoTexto.textContent = `€1 = R$${cotacao.toFixed(2)}`;
+          atualizarTotal();
+        } else {
+          cotacaoTexto.innerHTML = `<span style="color:red;">Erro ao carregar a cotação.</span>`;
+        }
+      })
+      .catch(() => {
+        cotacaoTexto.innerHTML = `<span style="color:red;">Erro de conexão. Usando valor padrão (€1 = R$6,00)</span>`;
+        atualizarTotal();
+      });
   </script>
 </body>
 </html>
